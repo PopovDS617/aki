@@ -25,7 +25,7 @@ const HomePage = () => {
         initial="hidden"
         animate="enter"
         exit="exit"
-        transition={{ duration: 1.2, delay: 0.3 }}
+        transition={{ duration: 1.2, delay: 0.8 }}
       >
         <Image src={catIcon} height={500} width={500} alt="cat icon" />
       </motion.div>
@@ -34,7 +34,7 @@ const HomePage = () => {
         initial="hidden"
         animate="enter"
         exit="exit"
-        transition={{ duration: 1.1, delay: 0.5 }}
+        transition={{ duration: 1.1, delay: 2 }}
       >
         <Button styles="homepage-button">
           <Link href="/one">{`let's go`}</Link>

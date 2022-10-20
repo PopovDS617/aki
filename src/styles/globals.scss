@@ -7,6 +7,9 @@ body {
   overflow: hidden;
 }
 
+body {
+  background-color: black;
+}
 // font-family: 'Amatic SC', cursive;
 // font-family: 'Bad Script', cursive;
 // font-family: 'Fuzzy Bubbles', cursive;
@@ -133,4 +136,32 @@ a {
   padding: 3rem;
   display: flex;
   flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  padding: 1rem;
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  text-align: center;
+  transition: all 0.5s;
+  .link {
+    padding: 10px 20px;
+    font-size: 2rem;
+    margin: 0 1rem;
+
+    border-radius: 50%;
+    transition: all 0.5s;
+  }
+
+  .active-link {
+    border: dashed 4px white;
+    transition: all 0.5s;
+  }
 }

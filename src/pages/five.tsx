@@ -7,7 +7,7 @@ import PawIcon from '../components/icons/PawIcon';
 
 type Props = {};
 
-const PageThree = (props: Props) => {
+const PageFive = (props: Props) => {
   const optionsStart = {
     initial: { opacity: 0, x: -180 },
     animate: { opacity: 1, x: 0 },
@@ -39,7 +39,7 @@ const PageThree = (props: Props) => {
         transition={{ duration: 0.6, delay: 1.2 }}
       >{`not a kitten anymore!`}</motion.div>
       <Button styles="button-next">
-        <Link href="/four">
+        <Link href="/">
           <div>
             <PawIcon />
           </div>
@@ -47,7 +47,7 @@ const PageThree = (props: Props) => {
         <p>next</p>
       </Button>
       <Button styles="button-back">
-        <Link href="/two">
+        <Link href="/four">
           <div>
             <PawIcon />
           </div>
@@ -58,4 +58,4 @@ const PageThree = (props: Props) => {
   );
 };
 
-export default PageThree;
+export default PageFive;

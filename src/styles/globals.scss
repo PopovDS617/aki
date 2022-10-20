@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bad+Script&family=Fuzzy+Bubbles:wght@400;700&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+// font-family: 'Amatic SC', cursive;
+// font-family: 'Bad Script', cursive;
+// font-family: 'Fuzzy Bubbles', cursive;
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.layout {
+  background-color: black;
+  height: 100vh;
+  color: white;
+  font-family: 'Fuzzy Bubbles', cursive;
+  font-weight: 700;
+}
+
+.homepage-button {
+  color: #e7b96b;
+  border-radius: 10px;
+  border: solid 2px #e7b96b;
+  font-size: 5rem;
+  padding: 20px;
+  background-color: transparent;
+  transition: all 0.5s;
+
+  &:hover {
+    outline: none;
+    background-color: #e7b96b;
+    color: black;
+    transition: all 0.5s;
+    transform: translateY(-10px);
+  }
+}
+
+.button-next {
+  color: green;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  cursor: pointer;
+  transition: all 0.7s;
+
+  p {
+    opacity: 0;
+    transition: all 0.7s;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: scale(1.1) rotate(45deg);
+    transition: all 0.7s;
+
+    p {
+      opacity: 1;
+      transition: all 0.7s;
+      transform: scale(1.1) rotate(-45deg);
+    }
+  }
+}
+
+.button-back {
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  cursor: pointer;
+  transition: all 0.7s;
+
+  p {
+    opacity: 0;
+    transition: all 0.7s;
+    text-align: center;
+  }
+
+  &:hover {
+    transform: scale(1.1) rotate(-45deg);
+    transition: all 0.7s;
+
+    p {
+      opacity: 1;
+      transition: all 0.7s;
+      transform: scale(1.1) rotate(45deg);
+    }
+  }
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text-start {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  text-align: start;
+}
+.header-text-end {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  text-align: end;
+}
+
+.page-one {
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+.page-two {
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}

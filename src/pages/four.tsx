@@ -50,7 +50,7 @@ const PageFour = (props: Props) => {
           width={1020}
           alt="cat-pic"
           objectFit="contain"
-          layout="responsive"
+         
           priority
         />
       </motion.div>

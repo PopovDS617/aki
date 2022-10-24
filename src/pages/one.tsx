@@ -42,7 +42,7 @@ const PageOne = () => {
           alt="cat-pic"
           objectFit="contain"
           quality={100}
-          layout="responsive"
+           
           priority
         />
       </motion.div>

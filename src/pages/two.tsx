@@ -49,6 +49,8 @@ const PageTwo = () => {
           alt="cat-pic"
           objectFit="contain"
           quality={100}
+          layout="responsive"
+          priority
         />
       </motion.div>
       <motion.div
@@ -66,6 +68,8 @@ const PageTwo = () => {
           alt="cat-pic"
           objectFit="contain"
           quality={100}
+          layout="responsive"
+          priority
         />
       </motion.div>
       <motion.div

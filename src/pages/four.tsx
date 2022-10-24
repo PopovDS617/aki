@@ -4,6 +4,8 @@ import Button from '../components/Button';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PawIcon from '../components/icons/PawIcon';
+import Pic from '../../public/images/pic-page-four.jpg';
+import Image from 'next/image';
 
 type Props = {};
 
@@ -20,24 +22,67 @@ const PageFour = (props: Props) => {
     exit: { opacity: 0, x: 180 },
   };
 
+  const optionsBottom = {
+    initial: { opacity: 0, y: 180 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: 180 },
+  };
+
+  const optionsPic = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
+
   return (
-    <div className="page-two">
+    <div className="page-four">
       <motion.div
-        className="header-text-start"
+        className="fourth-page-photo"
+        variants={optionsPic}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+      >
+        <Image
+          src={Pic}
+          height={800}
+          width={1020}
+          alt="cat-pic"
+          objectFit="contain"
+        />
+      </motion.div>
+
+      <motion.div
+        className="header-text-start-page-four"
         variants={optionsStart}
         initial="initial"
         animate="animate"
         exit="exit"
         transition={{ duration: 0.6, delay: 0.5 }}
-      >{`I'm already one year old`}</motion.div>
+      >
+        <p>{`But`}</p>
+      </motion.div>
       <motion.div
-        className="header-text-end"
+        className="header-text-end-page-four"
         variants={optionsEnd}
         initial="initial"
         animate="animate"
         exit="exit"
         transition={{ duration: 0.6, delay: 1.2 }}
-      >{`not a kitten anymore!`}</motion.div>
+      >
+        <p>{`most of the time`}</p>
+      </motion.div>
+      <motion.div
+        className="header-text-bottom-page-four"
+        variants={optionsBottom}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.6, delay: 1.8 }}
+      >
+        <p>{`I'm lazy`}</p>
+      </motion.div>
       <Button styles="button-next">
         <Link href="/five">
           <div>

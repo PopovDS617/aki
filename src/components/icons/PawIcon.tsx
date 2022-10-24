@@ -7,7 +7,7 @@ const PawIcon = (props: Props) => {
     <svg
       viewBox="0 0 274.2 244.33"
       version="1.1"
-      fill="ccurrentColorolor"
+      fill="currentColor"
       height={100}
       width={100}
     >

@@ -3,10 +3,10 @@ import Button from '../components/Button';
 import Link from 'next/link';
 import PawIcon from '../components/icons/PawIcon';
 import { motion } from 'framer-motion';
+import firstPic from '../../public/images/first-pic.jpg';
+import Image from 'next/image';
 
-type Props = {};
-
-const PageOne = (props: Props) => {
+const PageOne = () => {
   const optionsStart = {
     initial: { opacity: 0, x: -180 },
     animate: { opacity: 1, x: 0 },
@@ -19,24 +19,52 @@ const PageOne = (props: Props) => {
     exit: { opacity: 0, x: 180 },
   };
 
+  const optionsPic = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
+
   return (
     <div className="page-one">
       <motion.div
-        className="header-text-start"
+        className="first-page-photo"
+        variants={optionsPic}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+      >
+        <Image
+          src={firstPic}
+          width={1920}
+          height={1080}
+          alt="cat-pic"
+          objectFit="contain"
+          quality={100}
+        />
+      </motion.div>
+
+      <motion.div
+        className="header-text-start-page-one"
         variants={optionsStart}
         initial="initial"
         animate="animate"
         exit="exit"
         transition={{ duration: 0.6, delay: 0.5 }}
-      >{`Hi, I'm Aki`}</motion.div>
+      >
+        <p>{`Hi, I'm Aki`}</p>
+      </motion.div>
       <motion.div
-        className="header-text-end"
+        className="header-text-end-page-one"
         variants={optionsEnd}
         initial="initial"
         animate="animate"
         exit="exit"
         transition={{ duration: 0.6, delay: 1.2 }}
-      >{`Nice to meet you!`}</motion.div>
+      >
+        <p>{`Nice to meet you!`}</p>
+      </motion.div>
       <Button styles="button-next">
         <Link href="/two">
           <div>

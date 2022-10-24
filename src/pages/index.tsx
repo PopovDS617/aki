@@ -2,8 +2,8 @@ import Button from '../components/Button';
 import Link from 'next/link';
 import Image from 'next/image';
 import catIcon from '../../public/images/red-cat-icon.png';
-import PawIcon from '../components/icons/PawIcon';
 import { motion } from 'framer-motion';
+import MovingPaws from '../components/MovingPaws';
 
 const HomePage = () => {
   const pageOptions = {
@@ -27,7 +27,7 @@ const HomePage = () => {
         exit="exit"
         transition={{ duration: 1.2, delay: 0.8 }}
       >
-        <Image src={catIcon} height={500} width={500} alt="cat icon" />
+        <Image src={catIcon} height={400} width={400} alt="cat icon" />
       </motion.div>
       <motion.div
         variants={buttonOptions}
@@ -40,6 +40,7 @@ const HomePage = () => {
           <Link href="/one">{`let's go`}</Link>
         </Button>
       </motion.div>
+      <MovingPaws />
     </div>
   );
 };

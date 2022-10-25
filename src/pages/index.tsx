@@ -1,9 +1,10 @@
 import Button from '../components/Button';
 import Link from 'next/link';
 import Image from 'next/image';
-import catIcon from '../../public/images/red-cat-icon.png';
+
 import { motion } from 'framer-motion';
 import MovingPaws from '../components/MovingPaws';
+import CatModel from '../components/3dmodel/three-loader';
 
 const HomePage = () => {
   const pageOptions = {
@@ -27,7 +28,9 @@ const HomePage = () => {
         exit="exit"
         transition={{ duration: 1.2, delay: 0.8 }}
       >
-        <Image src={catIcon} height={400} width={400} alt="cat icon" />
+        <div className="cat-three-model">
+          <CatModel />
+        </div>
       </motion.div>
       <motion.div
         variants={buttonOptions}

@@ -26,7 +26,7 @@ const HomePage = () => {
         initial="hidden"
         animate="enter"
         exit="exit"
-        transition={{ duration: 1.2, delay: 0.8 }}
+        transition={{ duration: 1.2, delay: 1.2 }}
       >
         <div className="cat-three-model">
           <CatModel />

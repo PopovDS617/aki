@@ -23,5 +23,5 @@
     "src/components/3dmodel/model-container.jsx",
     "src/util/gtlf-loader.jsx"
   ],
-  "exclude": ["node_modules", "3dmodel/**"]
+  "exclude": ["node_modules"]
 }

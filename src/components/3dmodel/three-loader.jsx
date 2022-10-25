@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
-
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { loadGLTFModel } from '../../util/gtlf-loader';
@@ -39,26 +38,22 @@ const CatModel = () => {
       refRenderer.current = renderer;
       const scene = new THREE.Scene();
 
-      const target = new THREE.Vector3(-0.5, 1.2, 0);
-      const initialCameraPosition = new THREE.Vector3(
-        20 * Math.sin(0.2 * Math.PI),
-        10,
-        20 * Math.cos(0.2 * Math.PI)
-      );
+      const target = new THREE.Vector3(0, 0, 0);
+      const initialCameraPosition = new THREE.Vector3(-15, 8, 20);
 
-      const scale = screenHeight * 0.05 + 1.8;
+      const scale = screenHeight * 0.08 + 1.8;
       const camera = new THREE.OrthographicCamera(
         -scale,
         scale,
         scale,
         -scale,
-        0.1,
+        0.001,
         50000
       );
       camera.position.copy(initialCameraPosition);
       camera.lookAt(target);
 
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
+      const ambientLight = new THREE.AmbientLight(0xcccccc, 0.95);
       scene.add(ambientLight);
 
       const controls = new OrbitControls(camera, renderer.domElement);

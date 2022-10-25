@@ -4,7 +4,7 @@ import CatSpinner from '../ui/CatSpinner';
 export const ModelSpinner = () => <CatSpinner duration="1s" />;
 
 export const ModelContainer = forwardRef(({ children }, ref) => (
-  <div ref={ref} className="model-cotainer">
+  <div ref={ref} className="model-container">
     {children}
   </div>
 ));

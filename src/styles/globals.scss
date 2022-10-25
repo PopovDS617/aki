@@ -414,11 +414,20 @@ a {
   }
 }
 
+.about-page {
+  height: 90vh;
+}
 .cat-three-model {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.model-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
 }

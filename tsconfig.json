@@ -15,6 +15,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/components/3dmodel/three-loader.jsx",
+    "src/components/3dmodel/model-container.jsx"
+  ],
+  "exclude": ["node_modules", "3dmodel/**"]
 }

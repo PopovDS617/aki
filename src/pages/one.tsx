@@ -37,8 +37,8 @@ const PageOne = () => {
       >
         <Image
           src={firstPic}
-          width={1920}
-          height={1080}
+          width={1620}
+          height={900}
           alt="cat-pic"
           objectFit="contain"
           quality={100}

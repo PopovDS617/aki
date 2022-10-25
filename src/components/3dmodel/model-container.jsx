@@ -3,9 +3,10 @@ import CatSpinner from '../ui/CatSpinner';
 
 export const ModelSpinner = () => <CatSpinner duration="1s" />;
 
-export const ModelContainer = forwardRef(({ children }, ref) => (
+// eslint-disable-next-line react/display-name
+export const ModelContainer = forwardRef((props, ref) => (
   <div ref={ref} className="model-container">
-    {children}
+    {props.children}
   </div>
 ));
 

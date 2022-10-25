@@ -1,13 +1,12 @@
 import React from 'react';
-
 import Button from '../components/Button';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import PawIcon from '../components/icons/PawIcon';
+import { motion } from 'framer-motion';
+import picSource from '../../public/images/pic-page-five.jpg';
+import Image from 'next/image';
 
-type Props = {};
-
-const PageFive = (props: Props) => {
+const PageOne = () => {
   const optionsStart = {
     initial: { opacity: 0, x: -180 },
     animate: { opacity: 1, x: 0 },
@@ -20,42 +19,71 @@ const PageFive = (props: Props) => {
     exit: { opacity: 0, x: 180 },
   };
 
+  const optionsPic = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
+
   return (
-    <div className="page-two">
+    <div className="page-five">
       <motion.div
-        className="header-text-start"
+        className="fifth-page-photo"
+        variants={optionsPic}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{ duration: 0.5 }}
+      >
+        <Image
+          src={picSource}
+          width={1000}
+          height={1000}
+          alt="cat-pic"
+          quality={100}
+          priority
+          objectFit="contain"
+        />
+      </motion.div>
+
+      <motion.div
+        className="header-text-start-page-five"
         variants={optionsStart}
         initial="initial"
         animate="animate"
         exit="exit"
         transition={{ duration: 0.6, delay: 0.5 }}
-      >{`I'm already one year old`}</motion.div>
+      >
+        <p>{`But still`}</p>
+      </motion.div>
       <motion.div
-        className="header-text-end"
+        className="header-text-end-page-five"
         variants={optionsEnd}
         initial="initial"
         animate="animate"
         exit="exit"
         transition={{ duration: 0.6, delay: 1.2 }}
-      >{`not a kitten anymore!`}</motion.div>
+      >
+        <p>{`I'm a good boy!`}</p>
+      </motion.div>
       <Button styles="button-next">
-        <Link href="/">
+        <Link href="/about">
           <div>
             <PawIcon />
           </div>
         </Link>
-        <p>next</p>
+        <p>about</p>
       </Button>
       <Button styles="button-back">
-        <Link href="/four">
+        <Link href="four">
           <div>
             <PawIcon />
           </div>
         </Link>
-        <p>back</p>
+        <p>home</p>
       </Button>
     </div>
   );
 };
 
-export default PageFive;
+export default PageOne;

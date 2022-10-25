@@ -29,76 +29,81 @@ const PageThree = (props: Props) => {
 
   return (
     <div className="page-three">
-      <motion.div className="page-three-content">
-        <div className="page-three-spinner-container">
-          <motion.div
-            variants={spinnerOptions}
+      <div className="page-three-content">
+        <div className="page-three-header">
+          <motion.h1
+            variants={optionsStart}
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.5, delay: 1.5 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <CatSpinner duration="0.9s" />
-          </motion.div>
-          <motion.p
-            variants={textOptions}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.5, delay: 1.5 }}
-          >
-            Fast
-          </motion.p>
+            Also I am:
+          </motion.h1>
         </div>
         <div className="page-three-spinner-container">
-          <motion.div
-            variants={spinnerOptions}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.6, delay: 2 }}
-          >
-            <CatSpinner duration="1s" />
-          </motion.div>
-          <motion.p
-            variants={textOptions}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.6, delay: 2 }}
-          >
-            Agile and
-          </motion.p>
+          <div className="page-three-spinner-and-text">
+            <motion.div
+              variants={spinnerOptions}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.5, delay: 1 }}
+            >
+              <CatSpinner duration="0.9s" />
+            </motion.div>
+            <motion.p
+              variants={textOptions}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.5, delay: 1 }}
+            >
+              Fast
+            </motion.p>
+          </div>
+          <div className="page-three-spinner-and-text">
+            <motion.div
+              variants={spinnerOptions}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.6, delay: 1.5 }}
+            >
+              <CatSpinner duration="1s" />
+            </motion.div>
+            <motion.p
+              variants={textOptions}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.6, delay: 1.5 }}
+            >
+              Agile &
+            </motion.p>
+          </div>
+          <div className="page-three-spinner-and-text">
+            <motion.div
+              variants={spinnerOptions}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.6, delay: 1.9 }}
+            >
+              <CatSpinner duration="1.2s" />
+            </motion.div>
+            <motion.p
+              variants={textOptions}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ duration: 0.6, delay: 1.9 }}
+            >
+              Handsome
+            </motion.p>
+          </div>
         </div>
-        <div className="page-three-spinner-container">
-          <motion.div
-            variants={spinnerOptions}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.8, delay: 2.3 }}
-          >
-            <CatSpinner duration="1.2s" />
-          </motion.div>
-          <motion.p
-            variants={textOptions}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.8, delay: 2.3 }}
-          >
-            Handsome{' '}
-          </motion.p>
-        </div>
-      </motion.div>
-      <motion.div
-        className="header-text-start-page-three"
-        variants={optionsStart}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{ duration: 0.6, delay: 0.5 }}
-      >{`Also I am:`}</motion.div>
+      </div>
 
       <Button styles="button-next">
         <Link href="/four">

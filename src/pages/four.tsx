@@ -46,11 +46,10 @@ const PageFour = (props: Props) => {
       >
         <Image
           src={Pic}
-          height={800}
-          width={1020}
+          width={1000}
+          height={1000}
           alt="cat-pic"
           objectFit="contain"
-         
           priority
         />
       </motion.div>
@@ -63,7 +62,7 @@ const PageFour = (props: Props) => {
         exit="exit"
         transition={{ duration: 0.6, delay: 0.5 }}
       >
-        <p>{`But`}</p>
+        <p>{`And sometimes`}</p>
       </motion.div>
       <motion.div
         className="header-text-end-page-four"
@@ -73,18 +72,9 @@ const PageFour = (props: Props) => {
         exit="exit"
         transition={{ duration: 0.6, delay: 1.2 }}
       >
-        <p>{`most of the time`}</p>
-      </motion.div>
-      <motion.div
-        className="header-text-bottom-page-four"
-        variants={optionsBottom}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{ duration: 0.6, delay: 1.8 }}
-      >
         <p>{`I'm lazy`}</p>
       </motion.div>
+
       <Button styles="button-next">
         <Link href="/five">
           <div>

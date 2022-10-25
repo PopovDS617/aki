@@ -3,7 +3,7 @@ import Button from '../components/Button';
 import Link from 'next/link';
 import PawIcon from '../components/icons/PawIcon';
 import { motion } from 'framer-motion';
-import firstPic from '../../public/images/first-pic.jpg';
+import picSource from '../../public/images/first-pic.jpg';
 import Image from 'next/image';
 
 const PageOne = () => {
@@ -36,14 +36,13 @@ const PageOne = () => {
         transition={{ duration: 0.5 }}
       >
         <Image
-          src={firstPic}
-          width={1620}
-          height={900}
+          src={picSource}
+          width={1000}
+          height={1000}
           alt="cat-pic"
-          objectFit="contain"
           quality={100}
-           
           priority
+          objectFit="contain"
         />
       </motion.div>
 

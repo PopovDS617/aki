@@ -18,6 +18,7 @@ const Layout = (props: Props) => {
     <div className="layout">
       {currentPath !== '/' && (
         <motion.div
+          className="navbar-container"
           initial={{ y: -100 }}
           animate={{ y: 0 }}
           exit={{ y: -100 }}

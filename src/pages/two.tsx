@@ -44,8 +44,8 @@ const PageTwo = () => {
       >
         <Image
           src={leftPic}
-          width={530}
-          height={700}
+          width={460}
+          height={690}
           alt="cat-pic"
           objectFit="contain"
           quality={100}
@@ -62,8 +62,8 @@ const PageTwo = () => {
       >
         <Image
           src={rightPic}
-          width={530}
-          height={700}
+          width={460}
+          height={690}
           alt="cat-pic"
           objectFit="contain"
           quality={100}

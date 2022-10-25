@@ -11,7 +11,6 @@ const Navbar = (props: Props) => {
   const currentPath = router.pathname;
   return (
     <div className="navbar">
-      <div className="nav-button-container"></div>
       <Button styles="return-home-button">
         <Link href="/">
           <div>
@@ -43,6 +42,11 @@ const Navbar = (props: Props) => {
         <Link href="/five">
           <a className={currentPath === '/five' ? 'active-link link' : 'link'}>
             5
+          </a>
+        </Link>
+        <Link href="/about">
+          <a className={currentPath === '/about' ? 'active-link link' : 'link'}>
+            about
           </a>
         </Link>
       </div>

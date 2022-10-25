@@ -23,7 +23,7 @@ const MovingPaws = (props: Props) => {
         });
       }
     };
-    const updateTimer = setInterval(updateCatStep, 1000);
+    const updateTimer = setInterval(updateCatStep, 800);
 
     return () => clearInterval(updateTimer);
   }, [catStep]);

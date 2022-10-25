@@ -20,7 +20,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src/components/3dmodel/three-loader.jsx",
-    "src/components/3dmodel/model-container.jsx"
+    "src/components/3dmodel/model-container.jsx",
+    "src/util/gtlf-loader.jsx"
   ],
   "exclude": ["node_modules", "3dmodel/**"]
 }

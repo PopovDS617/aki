@@ -39,7 +39,7 @@ const CatModel = () => {
       const scene = new THREE.Scene();
 
       const target = new THREE.Vector3(0, 0, 0);
-      const initialCameraPosition = new THREE.Vector3(-15, 8, 20);
+      const initialCameraPosition = new THREE.Vector3(-15, 8, 25);
 
       const scale = screenHeight * 0.08 + 1.8;
       const camera = new THREE.OrthographicCamera(
@@ -54,6 +54,7 @@ const CatModel = () => {
       camera.lookAt(target);
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, 0.95);
+
       scene.add(ambientLight);
 
       const controls = new OrbitControls(camera, renderer.domElement);
@@ -69,8 +70,9 @@ const CatModel = () => {
       });
 
       let req = null;
-      let frame = 0;
+
       const animate = () => {
+        target.autoRotate;
         req = requestAnimationFrame(animate);
         controls.update();
 

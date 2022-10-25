@@ -80,11 +80,9 @@ a {
     height: 100px;
     width: 100px;
   }
- 
- 
 }
 
- .moving-paw-right-to-left {
+.moving-paw-right-to-left {
   color: #e7b96b;
 
   svg {
@@ -184,7 +182,27 @@ a {
   }
 }
 
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.header-text-start-basic {
+  font-size: 4rem;
+
+  text-align: start;
+  z-index: 10;
+  position: absolute;
+
+  p {
+    background-color: black;
+    display: inline;
+    padding: 0.5rem 2rem;
+    border-radius: 30px;
+  }
+}
 .header-text-end-basic {
   font-size: 4rem;
 

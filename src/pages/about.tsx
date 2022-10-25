@@ -1,7 +1,12 @@
 import React from 'react';
+import Animation from '../components/3dmodel/three-loader';
 
 const AboutPage = () => {
-  return <div>about</div>;
+  return (
+    <div className="cat-three-model">
+      <Animation />
+    </div>
+  );
 };
 
 export default AboutPage;

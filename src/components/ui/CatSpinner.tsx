@@ -35,7 +35,7 @@ const CatSpinner = (props: Props) => {
           cy="50"
           r="39.891"
           stroke="#e7b96b"
-          stroke-width="14.4"
+          strokeWidth="14.4"
           fill="none"
           stroke-dasharray="0 300"
         >

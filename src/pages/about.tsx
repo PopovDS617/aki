@@ -50,7 +50,6 @@ const AboutPage = () => {
              <a href="https://github.com/PopovDS617/aki" target="_blank">
              {`GitHub repo`}
              </a>
-           
           </Button>
           <Button styles="homepage-button">
             <Link href="/">{`start again`}</Link>

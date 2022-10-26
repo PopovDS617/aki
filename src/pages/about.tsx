@@ -46,7 +46,7 @@ const AboutPage = () => {
             
           </div>
           
-           <Button styles="homepage-button">
+           <Button styles="github-button">
              <a href="https://github.com/PopovDS617/aki" target="_blank">
              {`GitHub repo`}
              </a>

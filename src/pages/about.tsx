@@ -35,6 +35,20 @@ const AboutPage = () => {
           exit="exit"
           transition={{ duration: 1.1, delay: 1.2 }}
         >
+          <div>This project is built with:
+          - Typescript
+            - NextJS
+            - Sass
+            - Framer Motion
+            - ThreeJS
+            
+            
+            
+          </div>
+          
+           <Button styles="homepage-button">
+            <Link href="https://github.com/PopovDS617/aki">{`GitHub repo`}</Link>
+          </Button>
           <Button styles="homepage-button">
             <Link href="/">{`start again`}</Link>
           </Button>

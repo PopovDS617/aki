@@ -193,6 +193,24 @@ a {
   }
 }
 
+.github-button {
+  color: white;
+  border-radius: 10px;
+  border: solid 2px #6e5494;
+  font-size: 2.5rem;
+  padding: 20px;
+  background-color: transparent;
+  transition: all 0.5s;
+  z-index: 10;
+  &:hover {
+    outline: none;
+    background-color: #6e5494;
+    color: black;
+    transition: all 0.5s;
+    transform: translateY(-10px);
+  }
+}
+
 .homepage-container {
   display: flex;
   flex-direction: column;

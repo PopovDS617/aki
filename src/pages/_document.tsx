@@ -10,6 +10,8 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Bad+Script&family=Fuzzy+Bubbles:wght@400;700&display=swap"
           rel="stylesheet"
         />
+         <title>Aki</title>
+        <meta name="desription" content="Aki's website" />
       </Head>
       <body className="h-screen bg-zinc-800 font-mont">
         <Main />

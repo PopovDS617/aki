@@ -35,21 +35,19 @@ const AboutPage = () => {
           exit="exit"
           transition={{ duration: 1.1, delay: 1.2 }}
         >
-          <div>This project is built with:
-          - Typescript
-            - NextJS
-            - Sass
-            - Framer Motion
-            - ThreeJS
-            
-            
-            
+          <div>
+            This project is built with: - Typescript - NextJS - Sass - Framer
+            Motion - ThreeJS
           </div>
-          
-           <Button styles="github-button">
-             <a href="https://github.com/PopovDS617/aki" target="_blank">
-             {`GitHub repo`}
-             </a>
+
+          <Button styles="github-button">
+            <a
+              href="https://github.com/PopovDS617/aki"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {`GitHub repo`}
+            </a>
           </Button>
           <Button styles="homepage-button">
             <Link href="/">{`start again`}</Link>

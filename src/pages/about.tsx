@@ -20,14 +20,26 @@ const AboutPage = () => {
   return (
     <div className="about-page">
       <motion.div
+        className="about-content"
         variants={pageOptions}
         initial="hidden"
         animate="enter"
         exit="exit"
         transition={{ duration: 1.2, delay: 0.8 }}
       >
-        <Image src={catIcon} height={400} width={400} alt="cat icon" />
-        <div className="about-description">one two three</div>
+        <div className="about-cat-icon">
+          <Image src={catIcon} height={300} width={300} alt="cat icon" />
+        </div>
+        <div className="about-description">
+          <h3>This project is built by Dmitry Popov with:</h3>
+          <ul className="tech-stack-list">
+            <li>- Typescript</li>
+            <li>- NextJS</li>
+            <li>- Sass</li>
+            <li>- Framer Motion </li>
+            <li>- ThreeJS</li>
+          </ul>
+        </div>
         <motion.div
           variants={buttonOptions}
           initial="hidden"
@@ -35,11 +47,6 @@ const AboutPage = () => {
           exit="exit"
           transition={{ duration: 1.1, delay: 1.2 }}
         >
-          <div>
-            This project is built with: - Typescript - NextJS - Sass - Framer
-            Motion - ThreeJS
-          </div>
-
           <Button styles="github-button">
             <a
               href="https://github.com/PopovDS617/aki"
@@ -49,7 +56,7 @@ const AboutPage = () => {
               {`GitHub repo`}
             </a>
           </Button>
-          <Button styles="homepage-button">
+          <Button styles="start-again-button">
             <Link href="/">{`start again`}</Link>
           </Button>
         </motion.div>

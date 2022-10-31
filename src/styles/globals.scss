@@ -485,11 +485,11 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 280px;
-      width: 280px;
-      @media (max-width: 600px) {
-        height: 200px;
-        width: 200px;
+      height: 270px;
+      width: 270px;
+      @media (max-width: 1400px) {
+        height: 180px;
+        width: 180px;
       }
     }
 

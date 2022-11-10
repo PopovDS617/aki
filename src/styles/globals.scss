@@ -35,6 +35,15 @@ a {
   align-items: center;
 }
 
+#three-canvas-container {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100% !important;
+  width: 100% !important;
+}
+
 .navbar-container {
   height: 10vh;
   background-color: black;

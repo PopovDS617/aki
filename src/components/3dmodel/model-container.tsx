@@ -1,6 +1,6 @@
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 
-import { CatModel } from './Aki5';
+import CatModel from './cat-model';
 
 const Three = () => {
   return (

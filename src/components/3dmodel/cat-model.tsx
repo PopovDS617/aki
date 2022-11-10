@@ -3,7 +3,6 @@ import React, { useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
 import { useFrame } from '@react-three/fiber';
-import { Group } from 'three';
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -34,7 +33,7 @@ type GLTFResult = GLTF & {
   };
 };
 
-export function CatModel(props: JSX.IntrinsicElements['group']) {
+function CatModel(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/aki5.glb') as unknown as GLTFResult;
 
   const catRef = useRef<any>(null);
@@ -116,5 +115,7 @@ export function CatModel(props: JSX.IntrinsicElements['group']) {
     </group>
   );
 }
+
+export default CatModel;
 
 useGLTF.preload('/aki5.glb');

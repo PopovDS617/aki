@@ -255,6 +255,17 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 400px;
+    width: 400px;
+
+    #three-canvas-container {
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100% !important;
+      width: 100% !important;
+    }
   }
 
   .model-container {

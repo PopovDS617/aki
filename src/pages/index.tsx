@@ -1,11 +1,10 @@
 import Button from '../components/Button';
 import Link from 'next/link';
-import Image from 'next/image';
-
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
+import Three from '../components/3dmodel/model-container';
 import { motion } from 'framer-motion';
 import MovingPaws from '../components/MovingPaws';
-import CatModel from '../components/3dmodel/three-loader';
-import Three from './'
 
 const HomePage = () => {
   const pageOptions = {
@@ -30,10 +29,17 @@ const HomePage = () => {
         transition={{ duration: 1.2, delay: 1.2 }}
       >
         <div className="cat-three-model">
-         <Canvas id="three-canvas-container" shadows="PCFsoft">
-        <Suspense fallback={<></>} />
-        <Three />
-      </Canvas>
+          <Suspense
+            fallback={
+              <>
+                <p>Loading...</p>
+              </>
+            }
+          >
+            <Canvas id="three-canvas-container" shadows>
+              <Three />
+            </Canvas>
+          </Suspense>
         </div>
       </motion.div>
       <motion.div

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import MovingPaws from '../components/MovingPaws';
 import CatModel from '../components/3dmodel/three-loader';
+import Three from './'
 
 const HomePage = () => {
   const pageOptions = {
@@ -29,7 +30,10 @@ const HomePage = () => {
         transition={{ duration: 1.2, delay: 1.2 }}
       >
         <div className="cat-three-model">
-          <CatModel />
+         <Canvas id="three-canvas-container" shadows="PCFsoft">
+        <Suspense fallback={<></>} />
+        <Three />
+      </Canvas>
         </div>
       </motion.div>
       <motion.div

@@ -1,104 +1,90 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { loadGLTFModel } from '../../util/gtlf-loader';
-import { ModelContainer } from './model-container';
-import { ModelSpinner } from './model-container';
+import React, { useRef, useEffect } from 'react';
+import { useGLTF } from '@react-three/drei';
+import gsap from 'gsap';
+import { useFrame } from '@react-three/fiber';
 
-const CatModel = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const refRenderer = useRef();
-  const refContainer = useRef();
-
-  const windowResizeHandler = useCallback(() => {
-    const { current: renderer } = refRenderer;
-    const { current: container } = refContainer;
-    if (container && renderer) {
-      const scW = container.clientWidth;
-      const scH = container.clientHeight;
-
-      renderer.setSize(scW, scH);
+export function CatModel(props) {
+  const catRef = useRef(null);
+  
+   useFrame(({}) => {
+    if (catRef.current.position.y < 3) {
+      catRef.current.position.y += 0.01;
     }
-  }, []);
+  });
 
-  useEffect(() => {
-    const { current: container } = refContainer;
-    if (container) {
-      const screenWidth = container.clientWidth;
-      const screenHeight = container.clientHeight;
-
-      const renderer = new THREE.WebGLRenderer({
-        antialias: true,
-        alpha: true,
-      });
-      renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(screenWidth, screenHeight);
-      renderer.outputEncoding = THREE.sRGBEncoding;
-      container.appendChild(renderer.domElement);
-      refRenderer.current = renderer;
-      const scene = new THREE.Scene();
-
-      const target = new THREE.Vector3(0, 0, 0);
-      const initialCameraPosition = new THREE.Vector3(-15, 8, 25);
-
-      const scale = screenHeight * 0.08 + 1.8;
-      const camera = new THREE.OrthographicCamera(
-        -scale,
-        scale,
-        scale,
-        -scale,
-        0.001,
-        50000
-      );
-      camera.position.copy(initialCameraPosition);
-      camera.lookAt(target);
-
-      const ambientLight = new THREE.AmbientLight(0xcccccc, 0.95);
-
-      scene.add(ambientLight);
-
-      const controls = new OrbitControls(camera, renderer.domElement);
-      controls.autoRotate = true;
-      controls.target = target;
-
-      loadGLTFModel(scene, '/aki5.glb', {
-        receiveShadow: false,
-        castShadow: false,
-      }).then(() => {
-        animate();
-        setIsLoading(false);
-      });
-
-      let req = null;
-
-      const animate = () => {
-        target.autoRotate;
-        req = requestAnimationFrame(animate);
-        controls.update();
-
-        renderer.render(scene, camera);
-      };
-
-      return () => {
-        cancelAnimationFrame(req);
-        renderer.domElement.remove();
-        renderer.dispose();
-      };
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('resize', windowResizeHandler, false);
-    return () => {
-      window.removeEventListener('resize', windowResizeHandler, false);
-    };
-  }, [windowResizeHandler]);
-
+  const { nodes, materials } = useGLTF('aki5.glb');
   return (
-    <ModelContainer ref={refContainer}>
-      {isLoading && <ModelSpinner />}
-    </ModelContainer>
+    <group {...props} dispose={null} ref={catRef}>
+      <group position={[-6.92, 12.4, -9.9]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978.geometry}
+          material={materials.Voxel_mat53}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_1.geometry}
+          material={materials.Voxel_mat95}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_2.geometry}
+          material={materials.Voxel_mat208}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_3.geometry}
+          material={materials.Voxel_mat216}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_4.geometry}
+          material={materials.Voxel_mat79}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_5.geometry}
+          material={materials.Voxel_mat246}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_6.geometry}
+          material={materials.Voxel_mat96}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_7.geometry}
+          material={materials.Voxel_mat33}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_8.geometry}
+          material={materials.Voxel_mat160}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_9.geometry}
+          material={materials.Voxel_mat255}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube5978_10.geometry}
+          material={materials.Voxel_mat53}
+        />
+      </group>
+    </group>
   );
-};
+}
 
-export default CatModel;
+useGLTF.preload('/aki5.glb');

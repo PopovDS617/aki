@@ -5,6 +5,7 @@ import { Suspense } from 'react';
 import Three from '../components/3dmodel/model-container';
 import { motion } from 'framer-motion';
 import MovingPaws from '../components/MovingPaws';
+import CatSpinner from '../components/ui/CatSpinner';
 
 const HomePage = () => {
   const pageOptions = {
@@ -29,13 +30,7 @@ const HomePage = () => {
         transition={{ duration: 1.2, delay: 1.2 }}
       >
         <div className="cat-three-model">
-          <Suspense
-            fallback={
-              <>
-                <p>Loading...</p>
-              </>
-            }
-          >
+          <Suspense fallback={<CatSpinner duration="1s" />}>
             <Canvas id="three-canvas-container" shadows>
               <Three />
             </Canvas>

@@ -37,7 +37,7 @@ const AboutPage = () => {
             <li>- NextJS</li>
             <li>- Sass</li>
             <li>- Framer Motion </li>
-            <li>- ThreeJS</li>
+            <li>- ThreeJS + Fiber + Drei</li>
           </ul>
         </div>
         <motion.div

@@ -31,7 +31,7 @@ const AboutPage = () => {
           <Image src={catIcon} height={300} width={300} alt="cat icon" />
         </div>
         <div className="about-description">
-          <h3>This project is built by Dmitry Popov with:</h3>
+          <h3>This project was created by Dmitry Popov with:</h3>
           <ul className="tech-stack-list">
             <li>- Typescript</li>
             <li>- NextJS</li>

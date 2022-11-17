@@ -39,7 +39,7 @@ function CatModel(props: JSX.IntrinsicElements['group']) {
   const catRef = useRef<any>(null);
   console.log(catRef);
   useFrame(({}) => {
-    catRef!.current.rotation.y += 0.004;
+    catRef!.current.rotation.y += 0.003;
   });
 
   return (

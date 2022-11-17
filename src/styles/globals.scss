@@ -4,11 +4,16 @@ html,
 body {
   padding: 0;
   margin: 0;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: black;
+  ul {
+    list-style-type: none !important;
+  }
 }
 // font-family: 'Amatic SC', cursive;
 // font-family: 'Bad Script', cursive;
@@ -133,6 +138,22 @@ a {
     color: black;
     transition: all 0.5s;
     transform: translateY(-10px);
+  }
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+}
+
+.homepage-scroll__text {
+  display: flex;
+  flex-direction: column;
+  color: #e7b96b;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 750px) {
+    display: none;
   }
 }
 
@@ -332,7 +353,7 @@ a {
     justify-content: center;
     z-index: 1;
     width: 60%;
-    height: 20%;
+    height: 70%;
     img {
       border-radius: 15%;
     }
@@ -360,7 +381,7 @@ a {
   .header-text-end-page-two {
     @extend .header-text-model;
     right: 3vw;
-    top: 20vh;
+    top: 30vh;
   }
 
   .second-page-photo {
@@ -552,4 +573,77 @@ a {
       }
     }
   }
+}
+
+.mobile-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 750px) {
+    display: none;
+  }
+}
+
+.mobile-page {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  h3 {
+    margin: 0;
+  }
+
+  .mobile-page__picture {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 375px;
+    img {
+      border-radius: 15%;
+    }
+  }
+
+  .mobile-page__text {
+    margin: 0.5rem auto;
+    min-width: 375px;
+    font-size: 1.5rem;
+    padding: 5px;
+    margin-top: 1rem;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+}
+
+.mobile-spinner {
+  width: 375px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-left: 2rem;
+
+  p {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+.mobile-page__header {
+  font-size: 2rem;
 }

@@ -2,6 +2,8 @@ import React from 'react';
 
 type Props = {
   duration: string;
+  width: string;
+  height: string;
 };
 
 const CatSpinner = (props: Props) => {
@@ -9,12 +11,11 @@ const CatSpinner = (props: Props) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       style={{
-        margin: 'auto',
         background: 'transparent',
         display: 'block',
       }}
-      width="150px"
-      height="150px"
+      width={props.width}
+      height={props.height}
       viewBox="0 0 100 100"
       preserveAspectRatio="xMidYMid"
     >

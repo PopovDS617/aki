@@ -50,7 +50,7 @@ const PageThree = (props: Props) => {
               exit="exit"
               transition={{ duration: 0.5, delay: 1 }}
             >
-              <CatSpinner duration="0.9s" />
+              <CatSpinner duration="0.9s" width="150px" height="150px" />
             </motion.div>
             <motion.p
               variants={textOptions}
@@ -70,7 +70,7 @@ const PageThree = (props: Props) => {
               exit="exit"
               transition={{ duration: 0.6, delay: 1.5 }}
             >
-              <CatSpinner duration="1s" />
+              <CatSpinner duration="1s" width="150px" height="150px" />
             </motion.div>
             <motion.p
               variants={textOptions}
@@ -90,7 +90,7 @@ const PageThree = (props: Props) => {
               exit="exit"
               transition={{ duration: 0.6, delay: 1.9 }}
             >
-              <CatSpinner duration="1.2s" />
+              <CatSpinner duration="1.2s" width="150px" height="150px" />
             </motion.div>
             <motion.p
               variants={textOptions}

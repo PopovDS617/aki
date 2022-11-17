@@ -6,6 +6,8 @@ import Three from '../components/3dmodel/model-container';
 import { motion } from 'framer-motion';
 import MovingPaws from '../components/MovingPaws';
 import CatSpinner from '../components/ui/CatSpinner';
+import ScrollDownIcon from '../components/icons/ScrollDownIcon';
+import MobileVersion from '../components/MobileVersion';
 
 const HomePage = () => {
   const pageOptions = {
@@ -21,7 +23,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="homepage-container">
+    <div id="start" className="homepage-container">
       <motion.div
         variants={pageOptions}
         initial="hidden"
@@ -30,7 +32,9 @@ const HomePage = () => {
         transition={{ duration: 1.2, delay: 1.2 }}
       >
         <div className="cat-three-model">
-          <Suspense fallback={<CatSpinner duration="1s" />}>
+          <Suspense
+            fallback={<CatSpinner duration="1s" height="150px" width="150px" />}
+          >
             <Canvas id="three-canvas-container" shadows>
               <Three />
             </Canvas>
@@ -47,8 +51,13 @@ const HomePage = () => {
         <Button styles="homepage-button">
           <Link href="/one">{`let's go`}</Link>
         </Button>
+        <div className="homepage-scroll__text">
+          <ScrollDownIcon />
+          <p>scroll</p>
+        </div>
       </motion.div>
       <MovingPaws />
+      <MobileVersion />
     </div>
   );
 };

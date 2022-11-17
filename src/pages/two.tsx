@@ -5,8 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PawIcon from '../components/icons/PawIcon';
 import Image from 'next/image';
-import leftPic from '../../public/images/second-pic-left.jpg';
-import rightPic from '../../public/images/second-pic-right.jpg';
+import picSource from '../../public/images/second-pic-right.jpg';
 
 const PageTwo = () => {
   const optionsStart = {
@@ -21,55 +20,33 @@ const PageTwo = () => {
     exit: { opacity: 0, x: 180 },
   };
 
-  const optionsLeftPic = {
-    initial: { opacity: 0, y: 180 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 180 },
-  };
-  const optionsRightPic = {
-    initial: { opacity: 0, y: -180 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -180 },
+  const optionsPic = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
   };
 
   return (
     <div className="page-two">
       <motion.div
         className="second-page-photo"
-        variants={optionsLeftPic}
+        variants={optionsPic}
         initial="initial"
         animate="animate"
         exit="exit"
         transition={{ duration: 0.5 }}
       >
         <Image
-          src={leftPic}
-          width={380}
-          height={550}
+          src={picSource}
+          width={680}
+          height={680}
           alt="cat-pic"
-          objectFit="contain"
           quality={100}
           priority
-        />
-      </motion.div>
-      <motion.div
-        className="second-page-photo"
-        variants={optionsRightPic}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{ duration: 0.5 }}
-      >
-        <Image
-          src={rightPic}
-          width={380}
-          height={550}
-          alt="cat-pic"
           objectFit="contain"
-          quality={100}
-          priority
         />
       </motion.div>
+
       <motion.div
         className="header-text-start-page-two"
         variants={optionsStart}

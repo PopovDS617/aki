@@ -46,8 +46,8 @@ const PageFour = (props: Props) => {
       >
         <Image
           src={Pic}
-          width={700}
-          height={700}
+          width={680}
+          height={680}
           alt="cat-pic"
           objectFit="contain"
           priority

@@ -37,8 +37,8 @@ const PageOne = () => {
       >
         <Image
           src={picSource}
-          width={700}
-          height={700}
+          width={680}
+          height={680}
           alt="cat-pic"
           quality={100}
           priority

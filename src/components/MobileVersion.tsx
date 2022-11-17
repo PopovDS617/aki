@@ -32,7 +32,7 @@ const MobileVersion = (props: Props) => {
         </div>
       </div>
       <div className="mobile-page">
-        <div className="mobile-page__text text-left">{`I'm already one year old`}</div>
+        <div className="mobile-page__text text-center">{`I'm already one year old`}</div>
         <div className="mobile-page__picture">
           <Image
             width={680}
@@ -46,7 +46,7 @@ const MobileVersion = (props: Props) => {
         </div>
       </div>
       <div className="mobile-page">
-        <div className="mobile-page__text text-right">
+        <div className="mobile-page__text text-center">
           {`Not a kitten anymore!`}
         </div>
 

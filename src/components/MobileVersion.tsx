@@ -65,15 +65,15 @@ const MobileVersion = (props: Props) => {
       <div className="mobile-page">
         <h3 className="mobile-page__header">Also I am:</h3>
         <div className="mobile-spinner">
-          <CatSpinner duration="0.9s" width="100px" height="100px" />
+          <CatSpinner duration="1.3s" width="150px" height="150px" />
           <p> {`Fast`}</p>
         </div>
         <div className="mobile-spinner">
-          <CatSpinner duration="1s" width="100px" height="100px" />
+         
           <p> {`Agile &`}</p>
         </div>
         <div className="mobile-spinner">
-          <CatSpinner duration="1.2s" width="100px" height="100px" />
+         
           <p> {`Handsome`}</p>
         </div>
       </div>

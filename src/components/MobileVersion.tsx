@@ -39,7 +39,7 @@ const MobileVersion = (props: Props) => {
             height={680}
             alt="cat-pic"
             quality={75}
-            priority
+            
             objectFit="contain"
             src={secondPic}
           />
@@ -56,7 +56,7 @@ const MobileVersion = (props: Props) => {
             height={680}
             alt="cat-pic"
             quality={75}
-            priority
+           
             objectFit="contain"
             src={thirdPic}
           />
@@ -87,7 +87,7 @@ const MobileVersion = (props: Props) => {
             height={680}
             alt="cat-pic"
             quality={75}
-            priority
+          
             objectFit="contain"
             src={fourthPic}
           />
@@ -103,7 +103,7 @@ const MobileVersion = (props: Props) => {
             height={680}
             alt="cat-pic"
             quality={75}
-            priority
+          
             objectFit="contain"
             src={fifthPic}
           />
@@ -127,7 +127,7 @@ const MobileVersion = (props: Props) => {
             height={200}
             width={200}
             quality={75}
-            priority
+          
             alt="cat icon"
             objectFit="contain"
           />

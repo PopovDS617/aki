@@ -1,10 +1,12 @@
-### 1. npm install
-### 2. npm run dev
+## DEMO https://cat-aki.vercel.app/
 
-<br/>
-<br/>
 
-Built with:
-- NextJS
-- Sass
+## Getting Started
+#### `1. npm install`
+#### `2. npm run dev`
 
+<br>
+
+## TO DO:
+
+to be added later 
